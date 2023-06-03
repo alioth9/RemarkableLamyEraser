@@ -230,21 +230,21 @@ int main(int argc, char *argv[]) {
       case ERASER_ERASE:
         printf("writing eraser\n");
         if (rmVersion == 1 || forceRM1Style)
-            activateToolEraserRM1(fd_touch, rmVersion);
+            activateToolEraserRM1(fd_wacom, rmVersion);
         else
             activateToolEraserRM2(fd_wacom);
         break;
       case ERASER_ERASE_OFF:
         printf("writing eraser\n");
         if (rmVersion == 1 || forceRM1Style)
-            deactivateToolEraserRM1(fd_touch, rmVersion);
+            deactivateToolEraserRM1(fd_wacom, rmVersion);
         else
             deactivateToolEraserRM2(fd_wacom);
         break;
       case ERASER_ERASE_TOGGLE:
         printf("writing eraser\n");
         if (rmVersion == 1 || forceRM1Style) {
-            toggleToolEraserRM1(fd_touch, rmVersion);
+            toggleToolEraserRM1(fd_wacom, rmVersion);
           }
         else
             toggleToolEraserRM2(fd_wacom);
@@ -252,28 +252,28 @@ int main(int argc, char *argv[]) {
 
       case ERASER_SELECT:
         printf("writing erase selection\n");
-        activateToolEraseSelect(fd_touch, rmVersion);
+        activateToolEraseSelect(fd_wacom, rmVersion);
         break;
       case ERASER_SELECT_OFF:
         printf("writing erase selection off\n");
-        deactivateToolEraseSelect(fd_touch, rmVersion);
+        deactivateToolEraseSelect(fd_wacom, rmVersion);
         break;
       case ERASER_SELECT_TOGGLE:
         printf("writing erase selection off\n");
-        toggleToolEraseSelect(fd_touch, rmVersion);
+        toggleToolEraseSelect(fd_wacom, rmVersion);
         break;
 
       case SELECT:
         printf("writing select\n");
-        activateToolSelect(fd_touch, rmVersion);
+        activateToolSelect(fd_wacom, rmVersion);
         break;
       case SELECT_OFF:
         printf("writing select\n");
-        deactivateToolSelect(fd_touch, rmVersion);
+        deactivateToolSelect(fd_wacom, rmVersion);
         break;
       case SELECT_TOGGLE:
         printf("writing select\n");
-        toggleToolSelect(fd_touch, rmVersion);
+        toggleToolSelect(fd_wacom, rmVersion);
         break;
       }
 
